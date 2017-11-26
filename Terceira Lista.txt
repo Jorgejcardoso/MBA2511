@@ -1,0 +1,290 @@
+Terceira lista
+Jorge Cardoso
+1042 a 1050
+
+1234,1241,1387,1397
+1110,1025,1259
+
+Uri 1042
+valores = input().split()
+valores = list(map(int, valores))
+for v in sorted(valores):
+    print(v)
+print('')
+for v in valores:
+    print(v)
+
+Uri 1043
+valores = input().split()
+valores = list(map(float,valores))
+A, B, C = valores
+if(A+B > C and B+C > A and A+C > B ):
+    print("Perimetro = %.1f" %(A+B+C))
+else:
+    print("Area = %.1f" %(0.5*(A+B)*C))
+
+
+Uri 1044
+valores = input().split()
+valores = list(map(int,valores))
+A, B = valores
+if (B%A == 0) or (A%B == 0):
+    print('Sao Multiplos')
+else:
+    print('Nao sao Multiplos')
+
+
+Uri 1045
+valores = input().split()
+valores = list(map(float,valores))
+A,B,C = sorted(valores)[::-1]
+continua = True
+if(A >= B+C):
+    print("NAO FORMA TRIANGULO")
+    continua = False
+if(A**2 == (B**2) + (C**2) and continua):
+    print("TRIANGULO RETANGULO")
+if(A**2 > (B**2) + (C**2) and continua):
+    print("TRIANGULO OBTUSANGULO")
+if(A**2 < (B**2) + (C**2) and continua):
+    print("TRIANGULO ACUTANGULO")
+if(A == B and B == C and continua):
+    print("TRIANGULO EQUILATERO")
+if((A == B or B == C) and not (A == B and B == C) and continua):
+    print("TRIANGULO ISOSCELES")
+
+
+Uri 1046
+valores = input().split()
+valores = list(map(int,valores))
+h1, h2 = valores
+if(h1 == h2):
+	print('O JOGO DUROU %d HORA(S)' %24)
+else:
+	if(h2 < h1):
+		print('O JOGO DUROU %d HORA(S)' %((24 - h1) + h2))
+	else:
+		print('O JOGO DUROU %d HORA(S)' %(h2 - h1))
+
+
+Uri 1047
+valores = input().split()
+valores = list(map(int,valores))
+a, b, c, d = valores
+inicio = a*60 + b
+final = c*60 + d
+duracao = 0
+if(a <= c):
+    duracao = final - inicio
+    if(duracao == 0):
+        print("O JOGO DUROU %d HORA(S) E %d MINUTO(S)" %(24,duracao%60))
+    else:
+        print("O JOGO DUROU %d HORA(S) E %d MINUTO(S)" %((duracao - duracao%60)/60,duracao%60))
+else:
+    duracao = (24*60 - inicio) + final
+    print("O JOGO DUROU %d HORA(S) E %d MINUTO(S)" %((duracao - duracao%60)/60,duracao%60))
+
+Uri 1048
+salario = float(input())
+if(salario <= 400):
+    print("Novo salario: %.2f" %(salario*1.15))
+    print("Reajuste ganho: %.2f" %(salario*0.15))
+    print("Em percentual: 15 %")
+if(salario > 400 and salario <= 800):
+    print("Novo salario: %.2f" %(salario*1.12))
+    print("Reajuste ganho: %.2f" %(salario*0.12))
+    print("Em percentual: 12 %")
+if(salario > 800 and salario <= 1200):
+    print("Novo salario: %.2f" %(salario*1.10))
+    print("Reajuste ganho: %.2f" %(salario*0.10))
+    print("Em percentual: 10 %")
+if(salario > 1200 and salario <= 2000):
+    print("Novo salario: %.2f" %(salario*1.07))
+    print("Reajuste ganho: %.2f" %(salario*0.07))
+    print("Em percentual: 7 %")
+if(salario > 2000):
+    print("Novo salario: %.2f" %(salario*1.04))
+    print("Reajuste ganho: %.2f" %(salario*0.04))
+    print("Em percentual: 4 %")
+
+Uri 1049
+nivel_01 = input()
+nivel_02 = input()
+nivel_03 = input()
+if(nivel_01 == 'vertebrado'):
+    if(nivel_02 == 'ave'):
+        if(nivel_03 == 'carnivoro'):
+            print('aguia')
+        else:
+            print('pomba')
+    else:
+        if(nivel_03 == 'onivoro'):
+            print('homem')
+        else:
+            print('vaca')
+else:
+    if(nivel_02 == 'inseto'):
+        if(nivel_03 == 'hematofago'):
+            print('pulga')
+        else:
+            print('lagarta')
+    else:
+        if(nivel_03 == 'hematofago'):
+            print('sanguessuga')
+        else:
+            print('minhoca')
+
+
+Uri 1050
+ddd = input()
+lista={"61":"Brasilia","71":"Salvador","11":"Sao Paulo","21":"Rio de Janeiro","32":"Juiz de Fora","19":"Campinas","27":"Vitoria","31":"Belo Horizonte"}
+try:
+    print(lista[ddd])
+except:
+    print("DDD nao cadastrado")
+
+
+
+Uri 1234
+while True:
+    try:
+        linha_new = ""
+        linha = input()
+
+        maiuscula = True
+
+        for l in linha:
+            if l == ' ':
+                linha_new += ' '
+                continue
+            if maiuscula:
+                linha_new += l.upper()
+                maiuscula = False
+            else:
+                linha_new += l.lower()
+                maiuscula = True
+        print(linha_new)
+    except EOFError:
+        break
+
+
+
+Uri 1241
+
+qte = int(input())
+
+for i in range(qte):
+    A, B = list(map(str,input().split()))
+    if A[-len(B):] == B:
+        print("encaixa")
+    else:
+        print("nao encaixa")
+
+
+Uri 1387
+while True:
+    L, R = list(map(int,input().split()))
+    if L+R == 0:
+        break
+    print(L+R)
+
+
+
+Uri 1397
+while True:
+    qte = int(input())
+
+    if qte == 0:
+        break
+    A,B = [0,0]
+
+    for i in range(qte):
+        n1, n2 = list(map(int,input().split()))
+        if n1>n2:
+            A += 1
+        if n1<n2:
+            B += 1
+    print("%d %d" %(A,B))
+
+
+Uri 1110
+while True:
+    n = int(input())
+
+    if n == 0 :
+        break
+
+    inicial = []
+    for i in range(1,n+1):
+        inicial.append(i)
+
+    resultado = []
+    while len(inicial) > 1:
+        resultado.append(inicial.pop(0))
+        inicial.insert(len(inicial)-1,inicial.pop(0))
+
+    print("Discarded cards: " + str(resultado).replace("[","").replace("]",""))
+    print("Remaining card: " + str(inicial[0]))
+
+
+
+Uri 1025
+from bisect import bisect_left
+def find(number,arr):
+    index = (bisect_left(arr,number))
+
+    if index < len(arr) and arr[index] == number:
+       return index + 1
+    else:
+       return -1
+
+seq = 1
+while True:
+    n, q = list(map(int,input().split()))
+    if n == 0 and q == 0:
+        break
+
+    print("CASE# %d:" % seq)
+    seq += 1
+    lista = []
+    for i in range(n+q):
+        if i < n:
+            lista.append(int(input()))
+
+        if i == (n-1):
+            lista.sort()
+
+        if i >= n:
+            pesq = int(input())
+            index = find(pesq, lista)
+
+            if index == -1:
+                print(str(pesq) + " not found")
+            else:
+                print(str(pesq) + " found at " + str(index))
+
+
+
+Uri 1259
+qte = int(input())
+
+pares = []
+impares = []
+for n in range(qte):
+    num = int(input())
+    if num % 2 == 0:
+        pares.append(num)
+    else:
+        impares.append(num)
+
+pares.sort()
+impares.sort(reverse=True)
+
+for p in pares:
+    print(p)
+
+for i in impares:
+    print(i)
+
+
+
